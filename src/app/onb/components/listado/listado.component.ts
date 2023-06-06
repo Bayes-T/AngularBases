@@ -9,19 +9,14 @@ import { Character } from '../../interfaces/character.interface';
 export class ListadoComponent {
 
   @Output()
-  onDeleteCharacter: EventEmitter<number> = new EventEmitter()
+  onDeleteCharacter: EventEmitter<string> = new EventEmitter()
 
   @Input()
   public characterList:Character[] = [
-    {name:"", power:0}
+    {id:"", name:"", power:0}
   ]
 
-
-
-  deleteCharacter(index:number):void {
-    this.onDeleteCharacter.emit(index)
-
-    index = 0
-    
+  deleteCharacter(id:string):void {
+    this.onDeleteCharacter.emit(id)
   }
 }

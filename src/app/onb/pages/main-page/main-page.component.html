@@ -1,0 +1,14 @@
+<h2>Orange is the New Black Characters</h2>
+
+<hr>
+
+<div class="row">
+    <div class="col">
+        <app-listado (onDeleteCharacter)="onDeleteCharacter($event)" [characterList]="characters"></app-listado>
+    </div>
+
+    <div class="col">
+
+       <app-formulario (onNewCharacter)="onAddCharacter($event)"></app-formulario>
+    </div>
+</div>
